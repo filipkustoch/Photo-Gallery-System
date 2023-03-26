@@ -1,30 +1,25 @@
 <?php include("includes/header.php"); ?>
 
 
-        <div class="row">
+<div class="row">
 
-            <!-- Blog Entries Column -->
-            <div class="col-md-8">
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
 
-    
-            
-          
-         
-
-            </div>
+    </div>
 
 
 
 
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-
-            
-                 <?php include("includes/sidebar.php"); ?>
+    <!-- Blog Sidebar Widgets Column -->
+    <div class="col-md-4">
 
 
+        <?php include("includes/sidebar.php"); ?>
 
-        </div>
-        <!-- /.row -->
 
-        <?php include("includes/footer.php"); ?>
+
+    </div>
+    <!-- /.row -->
+
+    <?php include("includes/footer.php"); ?>
