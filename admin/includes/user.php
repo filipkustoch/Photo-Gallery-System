@@ -7,6 +7,9 @@ class User
     {
         global $database;
 
+        $result_set = $database->query("SELECT * FROM users");
+        return $result_set;
+
     }
 }
 
