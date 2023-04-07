@@ -1,5 +1,7 @@
 <?php ob_start();
-include("autoloader.php");?>
+include("autoloader.php");
+include("database.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">

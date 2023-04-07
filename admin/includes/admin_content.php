@@ -9,9 +9,6 @@
             </h1>
 
             <?php
-
-            $database = new Database();
-
             $sql = "SELECT * FROM users";
 
             $result = $database->query($sql);
