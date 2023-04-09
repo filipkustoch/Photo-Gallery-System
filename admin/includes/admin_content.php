@@ -9,8 +9,7 @@
             </h1>
 
             <?php
-            $user = new User();
-            $result = $user->find_all_users();
+            $result = User::find_all_users();
 
             while ($row = $result->fetch_array()){
                 echo $row['username'] . "<br>";
