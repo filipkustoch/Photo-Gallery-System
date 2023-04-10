@@ -11,6 +11,14 @@ class User
         return $result_set;
 
     }
+
+    public function find_user_by_id($user_id){
+        global $database;
+
+        $result_set = $database->query("SELECT * FROM users WHERE id = $user_id");
+        $found_user = mysqli_fetch_array($result_set);
+        return $found_user;
+    }
 }
 
 
