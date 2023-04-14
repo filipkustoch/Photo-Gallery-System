@@ -18,9 +18,9 @@
             $found_user = User::find_user_by_id(1);
 
             $user = new User();
-            echo $user->username = $found_user['username'];
-            echo $user->password = $found_user['password'];
-            echo $user->firstname = $found_user['first_name'];
+            echo $user->username = $found_user['username'] . "<br>";
+            echo $user->password = $found_user['password'] . "<br>";
+            echo $user->firstname = $found_user['first_name'] . "<br>";
             echo $user->lastname = $found_user['last_name'];
 
             
