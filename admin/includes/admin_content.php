@@ -9,14 +9,21 @@
             </h1>
 
             <?php
-            $result = User::find_all_users();
+            // $result = User::find_all_users();
 
-            while ($row = $result->fetch_array()){
-                echo $row['username'] . "<br>";
-            }
+            // while ($row = $result->fetch_array()){
+            //     echo $row['username'] . "<br>";
+            // }
 
             $found_user = User::find_user_by_id(1);
-            echo $found_user['username'];
+
+            $user = new User();
+            echo $user->username = $found_user['username'];
+            echo $user->password = $found_user['password'];
+            echo $user->firstname = $found_user['first_name'];
+            echo $user->lastname = $found_user['last_name'];
+
+            
             ?>
 
 
