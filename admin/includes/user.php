@@ -18,9 +18,9 @@ class User
     {
         global $database;
 
-        $result_set = self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
-        $found_user = mysqli_fetch_array($result_set);
-        return $found_user;
+        // $result_set = self::find_this_query("SELECT * FROM users WHERE id = $user_id LIMIT 1");
+        // $found_user = mysqli_fetch_array($result_set);
+        // return $found_user;
     }
 
     public static function find_this_query($sql)
@@ -28,7 +28,13 @@ class User
         global $database;
 
         $result_set = $database->query($sql);
-        return $result_set;
+        $object_array = array();
+
+        while ($row = mysqli_fetch_array($result_set)){
+            $object_array[] = self::instantiate($row);
+        }
+
+        return $object_array;
     }
 
     public static function instantiate($record)
