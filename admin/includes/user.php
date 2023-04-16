@@ -31,15 +31,22 @@ class User
         return $result_set;
     }
 
-    public static function instantiate($found_user)
+    public static function instantiate($record)
     {
         $object = new self();
-        $object->username = $found_user['username'];
-        $object->password = $found_user['password'];
-        $object->firstname = $found_user['first_name'];
-        $object->lastname = $found_user['last_name'];
+        foreach ($record as $key => $value) {
+            if($object->has_the_attribute($key)){
+                $object->$key = $value;
+            }
+        }
 
         return $object;
+    }
+
+    private function has_the_attribute($key){
+        $object_properties = get_object_vars($this);
+
+        return array_key_exists($key,$object_properties);
     }
 
 }

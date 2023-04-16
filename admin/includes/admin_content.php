@@ -9,19 +9,10 @@
             </h1>
 
             <?php
-            // $result = User::find_all_users();
-
-            // while ($row = $result->fetch_array()){
-            //     echo $row['username'] . "<br>";
-            // }
-
             $found_user = User::find_user_by_id(1);
 
             $user = User::instantiate($found_user);
-            echo $user->password;
-            
-
-            
+            echo $user->username;
             ?>
 
 
