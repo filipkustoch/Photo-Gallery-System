@@ -17,11 +17,9 @@
 
             $found_user = User::find_user_by_id(1);
 
-            $user = new User();
-            echo $user->username = $found_user['username'];
-            echo $user->password = $found_user['password'];
-            echo $user->firstname = $found_user['first_name'];
-            echo $user->lastname = $found_user['last_name'];
+            $user = User::instantiate($found_user);
+            echo $user->password;
+            
 
             
             ?>

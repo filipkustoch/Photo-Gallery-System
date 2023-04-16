@@ -31,6 +31,17 @@ class User
         return $result_set;
     }
 
+    public static function instantiate($found_user)
+    {
+        $object = new self();
+        $object->username = $found_user['username'];
+        $object->password = $found_user['password'];
+        $object->firstname = $found_user['first_name'];
+        $object->lastname = $found_user['last_name'];
+
+        return $object;
+    }
+
 }
 
 
